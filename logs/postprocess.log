@@ -1,0 +1,120 @@
+nohup: ignoring input
+[strict] attempts=169 unmatched=0 dist={0: 137, 1: 10, 2: 10, 3: 5, 4: 7}
+  garak hits=13 hits@L0=5 L3+=12 L3+ missed=6
+[strict] attempts=172 unmatched=0 dist={0: 153, 1: 3, 2: 8, 3: 5, 4: 3}
+  garak hits=8 hits@L0=4 L3+=8 L3+ missed=4
+[strict] attempts=158 unmatched=0 dist={0: 127, 1: 3, 2: 16, 3: 3, 4: 8, 6: 1}
+  garak hits=12 hits@L0=3 L3+=12 L3+ missed=5
+[strict] attempts=97 unmatched=0 dist={0: 79, 2: 5, 3: 5, 4: 8}
+  garak hits=26 hits@L0=10 L3+=13 L3+ missed=0
+[strict] attempts=130 unmatched=0 dist={0: 117, 1: 4, 2: 3, 3: 3, 4: 3}
+  garak hits=26 hits@L0=15 L3+=6 L3+ missed=1
+[strict] attempts=126 unmatched=0 dist={0: 114, 1: 2, 2: 5, 3: 5}
+  garak hits=23 hits@L0=11 L3+=5 L3+ missed=0
+[lenient] attempts=169 unmatched=0 dist={0: 141, 1: 13, 2: 10, 3: 5}
+  garak hits=13 hits@L0=9 L3+=5 L3+ missed=5
+[lenient] attempts=172 unmatched=0 dist={0: 156, 1: 3, 2: 8, 3: 5}
+  garak hits=8 hits@L0=7 L3+=5 L3+ missed=4
+[lenient] attempts=158 unmatched=0 dist={0: 133, 1: 8, 2: 12, 3: 3, 4: 1, 5: 1}
+  garak hits=12 hits@L0=6 L3+=5 L3+ missed=1
+[lenient] attempts=97 unmatched=0 dist={0: 86, 1: 3, 2: 3, 3: 5}
+  garak hits=26 hits@L0=15 L3+=5 L3+ missed=0
+[lenient] attempts=130 unmatched=0 dist={0: 119, 1: 5, 2: 3, 3: 3}
+  garak hits=26 hits@L0=16 L3+=3 L3+ missed=0
+[lenient] attempts=126 unmatched=0 dist={0: 114, 1: 2, 2: 5, 3: 5}
+  garak hits=23 hits@L0=11 L3+=5 L3+ missed=0
+  judged 10/852
+  judged 20/852
+  judged 30/852
+  judged 40/852
+  judged 50/852
+  judged 60/852
+  judged 70/852
+  judged 80/852
+  judged 90/852
+  judged 100/852
+  judged 110/852
+  judged 120/852
+  judged 130/852
+  judged 140/852
+  judged 150/852
+  judged 160/852
+  judged 170/852
+  judged 180/852
+  judged 190/852
+  judged 200/852
+  judged 210/852
+  judged 220/852
+  judged 230/852
+  judged 240/852
+  judged 250/852
+  judged 260/852
+  judged 270/852
+  judged 280/852
+  judged 290/852
+  judged 300/852
+  judged 310/852
+  judged 320/852
+  judged 330/852
+  judged 340/852
+  judged 350/852
+  judged 360/852
+  judged 370/852
+  judged 380/852
+  judged 390/852
+  judged 400/852
+  judged 410/852
+  judged 420/852
+  judged 430/852
+  judged 440/852
+  judged 450/852
+  judged 460/852
+  judged 470/852
+  judged 480/852
+  judged 490/852
+  judged 500/852
+  judged 510/852
+  judged 520/852
+  judged 530/852
+  judged 540/852
+  judged 550/852
+  judged 560/852
+  judged 570/852
+  judged 580/852
+  judged 590/852
+  judged 600/852
+  judged 610/852
+  judged 620/852
+  judged 630/852
+  judged 640/852
+  judged 650/852
+  judged 660/852
+  judged 670/852
+  judged 680/852
+  judged 690/852
+  judged 700/852
+  judged 710/852
+  judged 720/852
+  judged 730/852
+  judged 740/852
+  judged 750/852
+  judged 760/852
+  judged 770/852
+  judged 780/852
+  judged 790/852
+  judged 800/852
+  judged 810/852
+  judged 820/852
+  judged 830/852
+  judged 840/852
+  judged 850/852
+  judged 852/852
+records=852 done=0 todo=852 judges=['opus', 'astra', 'gptoss']
+opus    binary    {'ok': 737, 'refused': 102, 'unparseable': 13}
+opus    severity  {'ok': 752, 'refused': 92, 'unparseable': 8}
+astra   binary    {'ok': 852}
+astra   severity  {'ok': 852}
+gptoss  binary    {'ok': 849, 'empty': 3}
+gptoss  severity  {'ok': 847, 'error': 2, 'empty': 3}
+done -> results/all.judged.jsonl
+wrote results/summary.strict.md and results/summary.lenient.md

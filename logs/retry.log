@@ -1,0 +1,42 @@
+  retried 10/223
+  retried 20/223
+  retried 30/223
+  retried 40/223
+  retried 50/223
+  retried 60/223
+  retried 70/223
+  retried 80/223
+  retried 90/223
+  retried 100/223
+  retried 110/223
+  retried 120/223
+  retried 130/223
+  retried 140/223
+  retried 150/223
+  retried 160/223
+  retried 170/223
+  retried 180/223
+  retried 190/223
+  retried 200/223
+  retried 210/223
+  retried 220/223
+  retried 223/223
+backup -> results/all.judged.jsonl.bak.20261029-224711
+before  opus    binary    {'ok': 737, 'refused': 102, 'unparseable': 13}
+before  opus    severity  {'ok': 752, 'refused': 92, 'unparseable': 8}
+before  gptoss  binary    {'ok': 849, 'empty': 3}
+before  gptoss  severity  {'ok': 847, 'error': 2, 'empty': 3}
+to retry: 223 judge/task cells, up to 3 tries each
+after   opus    binary    {'ok': 773, 'refused': 73, 'unparseable': 6}
+after   opus    severity  {'ok': 782, 'refused': 69, 'unparseable': 1}
+after   gptoss  binary    {'ok': 852}
+after   gptoss  severity  {'ok': 852}
+recovered gptoss binary: 3 on try 1
+recovered gptoss severity: 5 on try 1
+recovered opus binary: 24 on try 1
+recovered opus binary: 7 on try 2
+recovered opus binary: 5 on try 3
+recovered opus severity: 21 on try 1
+recovered opus severity: 6 on try 2
+recovered opus severity: 3 on try 3
+written -> results/all.judged.jsonl

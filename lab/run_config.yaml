@@ -1,0 +1,26 @@
+# garak run configuration (garak-lab-eval).
+# Red-team model and in-loop judge: the project default openai/gpt-oss-120b, served by DeepInfra
+# (NVIDIA's hosted endpoint returned HTTP 410, end of life 2026-09-03). Key: OPENAICOMPATIBLE_API_KEY.
+run:
+  generations: 1
+plugins:
+  probes:
+    agent_breaker:
+      AgentBreaker:
+        max_attempts_per_tool: 5
+        max_calls_per_conv: 50
+        red_team_model_type: openai.OpenAICompatible
+        red_team_model_name: openai/gpt-oss-120b
+        red_team_model_config:
+          uri: https://api.deepinfra.com/v1/openai
+          max_tokens: 8192
+          suppressed_params: ["stop"]
+  detectors:
+    agent_breaker:
+      AgentBreakerResult:
+        detector_model_type: openai.OpenAICompatible
+        detector_model_name: openai/gpt-oss-120b
+        detector_model_config:
+          uri: https://api.deepinfra.com/v1/openai
+          max_tokens: 8192
+          suppressed_params: ["n", "stop"]

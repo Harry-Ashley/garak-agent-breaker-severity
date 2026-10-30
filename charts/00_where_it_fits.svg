@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#898781"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="420" fill="#fcfcfb"/>
+  <text x="20" y="32" font-size="17" font-weight="600" fill="#0b0b0b">Where a graded detector sits in garak's agent_breaker flow (nothing existing changes)</text>
+
+  <!-- probe -->
+  <rect x="20" y="130" width="200" height="92" rx="8" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="120" y="160" text-anchor="middle" font-weight="600" fill="#0b0b0b">probes.agent_breaker</text>
+  <text x="120" y="182" text-anchor="middle" fill="#52514e">attacker LLM writes a</text>
+  <text x="120" y="200" text-anchor="middle" fill="#52514e">prompt per target tool</text>
+
+  <!-- generator -->
+  <rect x="280" y="130" width="200" height="92" rx="8" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="380" y="160" text-anchor="middle" font-weight="600" fill="#0b0b0b">your agent (generator)</text>
+  <text x="380" y="182" text-anchor="middle" fill="#52514e">calls tools, replies</text>
+  <text x="380" y="200" text-anchor="middle" fill="#52514e">attempt.outputs = reply text</text>
+
+  <!-- arrows -->
+  <line x1="220" y1="176" x2="280" y2="176" stroke="#898781" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="480" y1="176" x2="540" y2="176" stroke="#898781" stroke-width="1.5"/>
+  <line x1="540" y1="176" x2="540" y2="100" stroke="#898781" stroke-width="1.5"/>
+  <line x1="540" y1="176" x2="540" y2="270" stroke="#898781" stroke-width="1.5"/>
+  <line x1="540" y1="100" x2="580" y2="100" stroke="#898781" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="540" y1="270" x2="580" y2="270" stroke="#898781" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="505" y="168" text-anchor="middle" font-size="12" fill="#898781">same text</text>
+
+  <!-- existing detector -->
+  <rect x="580" y="56" width="500" height="92" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="1.5"/>
+  <text x="596" y="82" font-weight="600" fill="#0b0b0b">detectors.agent_breaker.AgentBreakerResult</text>
+  <text x="596" y="102" fill="#52514e">today, unchanged: judge asks "was the target tool misused?"</text>
+  <text x="596" y="122" fill="#52514e">YES / PARTIAL / NO  →  score 1.0 or 0.0  →  ASR</text>
+  <text x="1068" y="82" text-anchor="end" font-size="12" fill="#2a78d6">existing</text>
+
+  <!-- proposed detector -->
+  <rect x="580" y="226" width="500" height="128" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="596" y="252" font-weight="600" fill="#0b0b0b">detectors.agent_breaker.AgentBreakerSeverity</text>
+  <text x="596" y="272" fill="#52514e">proposed, additive: judge grades the consequence on L0 to L6</text>
+  <text x="596" y="292" fill="#52514e">score = level / 6, so L3 and above cross garak's default 0.5 threshold</text>
+  <text x="596" y="312" fill="#52514e">violations list and level stored in attempt.notes for the report</text>
+  <text x="596" y="336" fill="#52514e" font-size="12.5">if the output carries a tool log, the log is graded; if not, only the reply is</text>
+  <text x="1068" y="252" text-anchor="end" font-size="12" fill="#eb6834">proposed</text>
+
+  <!-- footnote -->
+  <text x="20" y="392" font-size="12.5" fill="#898781">Both detectors read the same attempt. Opt in with --detectors agent_breaker.AgentBreakerSeverity; existing reports and ASR numbers are untouched.</text>
+  <text x="20" y="410" font-size="12.5" fill="#898781">A trajectory channel for detectors (garak issue #2173) would let the graded detector read tool calls directly instead of relying on the target to echo them.</text>
+</svg>
