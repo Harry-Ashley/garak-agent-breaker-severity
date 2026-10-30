@@ -1,3 +1,19 @@
+> **Status: exploratory study, retained for transparency**
+>
+> This evaluation has known methodological limitations: the original
+> conditions used different adaptive attack runs; tool logs were mixed
+> with agent responses; and the post-hoc binary scorer omitted garak's
+> confidence cutoff. The severity rubric was also revised and evaluated
+> on the same dataset.
+>
+> The original claims and results below are preserved as a historical
+> record, not validated conclusions about garak's detection accuracy or
+> the general validity of the severity scale. A fresh evaluation is
+> planned with separate execution evidence, paired comparisons, and
+> held-out validation.
+
+---
+
 # Adding a severity dimension to garak agent_breaker: an evaluation
 
 An evaluation of [NVIDIA garak](https://github.com/NVIDIA/garak)'s `agent_breaker` probe and its
