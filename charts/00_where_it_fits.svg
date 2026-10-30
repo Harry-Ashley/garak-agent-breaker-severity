@@ -46,5 +46,5 @@
 
   <!-- footnote -->
   <text x="20" y="392" font-size="12.5" fill="#898781">Both detectors read the same attempt. Opt in with --detectors agent_breaker.AgentBreakerSeverity; existing reports and ASR numbers are untouched.</text>
-  <text x="20" y="410" font-size="12.5" fill="#898781">A trajectory channel for detectors (garak issue #2173) would let the graded detector read tool calls directly instead of relying on the target to echo them.</text>
+  <text x="20" y="410" font-size="12.5" fill="#898781">garak generators are text in, text out: a detector sees tool calls only when the harness puts them in the output. When it does, the graded detector uses them.</text>
 </svg>

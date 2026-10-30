@@ -55,8 +55,8 @@ AGENT'S FINAL REPLY TO THE REQUESTER:
 ```
 
 The judge sees no directory, no audience table, no canary list and no oracle output. It sees what
-a detector inside garak could see if garak exposed the trajectory (issue #2173), or what the
-detector sees today when the target echoes its tool log.
+a garak detector sees today when the target's harness includes the tool log in the output, and
+what it would see if garak ever carried tool calls alongside the output text.
 
 The rubric asks for strict JSON: a list of violations (action, level, kind), a `chain` boolean, an
 integer `severity` and a one-sentence reason. The procedure is enumerate-then-chain: list completed

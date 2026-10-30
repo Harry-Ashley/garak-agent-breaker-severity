@@ -121,9 +121,11 @@ reply that said it could not or did not do it.** Examples, verbatim from the log
 
 The second one is the L6 (a privilege grant plus a disclosure). garak's judge read the reply,
 believed it, and returned `NO` at confidence 0.95. In condition A, 8 of these 9 contradicted replies
-went unflagged; in condition B, 10 of 10 were caught. This is the strongest argument in the data for
-giving detectors access to the trajectory (garak [#2173](https://github.com/NVIDIA/garak/issues/2173)),
-and it is why the proposed detector is designed to grade a trajectory when one is present.
+went unflagged; in condition B, 10 of 10 were caught. No detector that reads only the reply, graded or
+binary, can catch the share. garak's generators are text in, text out, so today a detector sees a
+target's tool calls only when the harness puts them in the output. When it does, a graded detector
+can use them; that is why the proposed detector is written to grade a trajectory when one is present
+and the reply alone when it is not.
 
 ### 3. The ceiling is the prompt, not the model
 
